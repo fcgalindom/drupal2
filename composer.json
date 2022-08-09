@@ -16,9 +16,13 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/bootstrap_barrio": "^5.5",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
-        "drupal/core-recommended": "^9.4"
+        "drupal/core-recommended": "^9.4",
+        "drupal/paragraphs": "^1.14",
+        "drupal/twig_tweak": "^3.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -90,5 +94,9 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/devel": "^4.1",
+        "drush/drush": "^11.1"
     }
 }

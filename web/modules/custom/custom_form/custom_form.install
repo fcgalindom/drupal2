@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * create table mytable
+ */
+function custom_form_schema()
+{
+    $schema['customform'] = [
+        'fields' => [
+            'issue_id' => array(
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'description' => 'Issue ID',
+            ),
+            'name' => [
+                'type' => 'varchar',
+                'length' => 40,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'lastname' => [
+                'type' => 'varchar',
+                'length' => 40,
+                //'not null' => TRUE,
+
+            ],
+
+
+        ],
+        'primary key' => array('issue_id'),
+        'indexes' => array(
+            'issueid' => array('issue_id'),
+        ),
+    ];
+
+    return $schema;
+}

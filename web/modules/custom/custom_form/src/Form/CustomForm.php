@@ -20,7 +20,7 @@ class CustomForm extends FormBase{
             
         $form['lastname'] = [
           '#type' => 'textfield',
-          '#value' => $this->t('lastname'),
+          '#title' => $this->t('lastname'),
         ];
 
         $form['sumbit'] = [
@@ -32,7 +32,35 @@ class CustomForm extends FormBase{
       }
 
     public function submitForm(array &$form, FormStateInterface $form_state) {
-        $this->messenger()->addStatus($this->t('Bienvenidos @fullname', ['@fullname' => $form_state->getValue('name').""]));
+
+
+
+        $field=$form_state->getValues();
+
+  
+        $name=$field['name'];
+        $lastname=$field['lastname'];
+
+        $field  = array(
+      
+          'name'   => $name,
+          'lastname'   => $lastname,
+          
+        );
+
+
+        $query = \Drupal::database();
+        $query ->insert('customform')
+            ->fields($field)
+            ->execute();
+
+
+
+
+
+
+        $this->messenger()->addStatus($this->t('Bienvenidos @fullname', ['@fullname' =>'se registro con exito']));
+        
     }
 
 

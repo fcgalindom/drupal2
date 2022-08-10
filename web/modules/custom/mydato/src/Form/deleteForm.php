@@ -83,7 +83,7 @@ class deleteForm extends ConfirmFormBase {
           ->condition('id',$this->id)
         ->execute();
         //if($query == TRUE){
-             drupal_set_message("Eliminado con exito.");
+          \Drupal::messenger()->addMessage("eleminacionacion exitosa");
         //    }
         // else{mydatoTableController
 

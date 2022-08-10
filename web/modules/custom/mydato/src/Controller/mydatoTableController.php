@@ -5,6 +5,7 @@ namespace Drupal\mydato\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Class DisplayTableController.
@@ -74,8 +75,8 @@ use Drupal\Core\Url;
                     'sexo' => $data->sexo,
                     'termino' => $data->termino,
 
-                    \Drupal::l('Delete', $delete),
-                    \Drupal::l('Edit', $edit),
+                    Link::fromTextAndUrl('Delete', $delete),
+                    Link::fromTextAndUrl('Edit', $edit),
 
            );
 

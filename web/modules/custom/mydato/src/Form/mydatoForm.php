@@ -362,7 +362,7 @@ public function submitForm(array &$form, FormStateInterface $form_state) {
               ->fields($field)
               ->condition('id', $_GET['num'])
               ->execute();
-          drupal_set_message("Actualizacion Exitosa.");
+              \Drupal::messenger()->addMessage("actualizacion exitosa");
           $form_state->setRedirect('mydato.display_table_controller_mydatover');
 
       }
@@ -386,7 +386,7 @@ public function submitForm(array &$form, FormStateInterface $form_state) {
            $query ->insert('mydato')
                ->fields($field)
                ->execute();
-           drupal_set_message("Se guardo exitosamente sus datos.");
+               \Drupal::messenger()->addMessage("Se guardo con exito");
 
            $response = new RedirectResponse("/mydato/table");
            //$response->send();

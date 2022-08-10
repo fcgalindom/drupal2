@@ -1,0 +1,32 @@
+mydato.mydato_controller_mostra:
+  path: /prueba
+  defaults:
+   _controller: \Drupal\mydato\Controller\MydatoController::Mostrar
+   _title: 'Prueba'
+  requirements:
+   _access: 'TRUE'
+
+mydato.mydato_form:
+  path: /mydato/form
+  defaults:
+     _form: \Drupal\mydato\Form\mydatoForm
+     _title: 'Registro de Datos'
+  requirements:
+     _access: 'TRUE'
+
+mydato.display_table_controller_mydatover:
+   path: '/mydato/table'
+   defaults:
+      _controller: '\Drupal\mydato\Controller\mydatoTableController::mydatover'
+      _title: 'Repote de usuario.'
+   requirements:
+      _access: 'TRUE'
+
+
+mydato.delete_form:
+  path: '/mydato/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\mydato\Form\deleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'

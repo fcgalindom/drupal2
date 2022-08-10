@@ -1,0 +1,5 @@
+name: mydatos
+type: module
+description: 'manejo de datos del crud'
+core_version_requirement: ^8.8.0 || ^9.0
+package: Custom

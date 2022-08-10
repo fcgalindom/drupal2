@@ -32,3 +32,20 @@ function drupal9_theme_form_system_theme_settings_alter(&$form, FormStateInterfa
     'bg-transparent' => t('Transparent'),
   ];
 }
+
+function drupal9_theme_preprocess_node(array &$variables) {
+
+  if(isset($variables['node'])){
+    $node = $variables['node'];
+    if(($node->getType() == 'detalles_contacto')) {
+      $message = \Drupal::entityTypeManager()
+        ->getStorage('contact_message')
+        ->create(array(
+          'contact_form' => 'feedback', //ID(NOMBRE MAQUINA) del formulario
+        ));
+      $form = \Drupal::service('entity.form_builder')->getForm($message);
+      $variables['feedback_form'] = $form;
+    }
+  }
+
+}

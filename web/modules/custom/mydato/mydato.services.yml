@@ -1,0 +1,3 @@
+services:
+  mydato.mydato_Repository:
+    class: Drupal\mydato\mydatorepository

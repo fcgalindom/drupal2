@@ -1,0 +1,9 @@
+global-styling:
+  version: 1.0.1
+  js:
+    assets/js/jquery.validate.js: {}
+    assets/js/f_contact.js: {}
+    assets/js/mydatovalidato.js: {}
+  css:
+    base:
+

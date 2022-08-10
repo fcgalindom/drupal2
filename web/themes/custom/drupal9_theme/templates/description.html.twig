@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Contains the text of the mydata explanation page
+ */
+#}
+
+<div class='mydato'>
+<section class="custom--form">
+            <header class="title">
+                <h1>
+                    DEJA TUS DATOS Y PODRÁS GANAR UN <span>4PACK</span> GRATIS
+                </h1>
+                <h1 class="mobile">
+                    REGÍSTRATE <span>DE-FRESA</span> Y GANA
+                </h1>
+            </header>
+
+            <form {{ form.attributes }} id='mydato' class='custom--row'>
+
+                 <div class="custom--col">{{ form.id }}</div>
+                 <div class="custom--col">{{ form.primer_nombre }}</div>
+                 <div class="custom--col">{{ form.segundo_nombre }}</div>
+                <div class="custom--col">{{ form.primer_apellido }}</div>
+                <div class="custom--col">{{ form.segundo_apellido }}</div>
+                <div class="custom--col">{{ form.email }}</div>
+                <div class="custom--col">{{ form.telefono }}</div>
+                <div class="custom--col">
+                    <span class="custom--form__gender">Genero</span>
+                    {{ form.sexo }}
+                </div>
+                <div class="custom--col">
+                    <span class="custom--form__copy">Fecha de nacimiento</span>
+                    <fieldset class="custom--form__fieldset custom--form__birthdate">
+                        {{ form.day }} {{ form.month }} {{ form.year }}
+                    </fieldset>
+                </div>
+
+               <!-- <div class="custom--col">{{ form.city }}</div>-->
+               
+                <div class="custom--col">{{ form.sexo }}</div>
+                <!--<div class="custom--col">{{ form.question2 }}</div>
+                <article class="custom-input__footer">
+                    <div class="custom--col__full custom--text__center">
+                        <label class="custom--input__checkout">
+                  {{ form.tyc }}
+                </label>
+                    </div>
+
+                    <div class="custom--col__full custom--text__center">
+                        <label class="custom--input__checkout">
+                  {{ form.marketing }}-->
+                </label>
+                    </div>
+                </article>
+                <div class="custom--col__full custom--text__center">
+                    <button type="button" id="btn-submit" name="op" class="custom--input__button"></button>
+                    <!-- <input type='button' id="btn-submit" name="op" value="ENVIAR" class="custom--input__button"> -->
+                </div>
+                <div class="custom--col" style="display:none;">{{ form.submit }}</div>
+
+                {{ form.form_build_id }} {{ form.form_token }} {{ form.form_id }}
+            </form>
+
+        </section>
+</div>

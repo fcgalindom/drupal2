@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * create table mytable
+ */
+function mydato_schema() {
+   $schema['mydato'] = [
+            'fields' => [
+                'id' => [
+                'type' =>'int',
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+                'name1'=> [
+                    'type' => 'varchar',
+                    'length' => 40,
+                    'not null' => TRUE,
+                    'default' => '',
+                ],
+                'name2'=> [
+                    'type' => 'varchar',
+                    'length' => 40,
+                    //'not null' => TRUE,
+                    
+                ],
+                'apel1'=>[
+                    'type' => 'varchar',
+                    'length' => 40,
+                    'not null' => TRUE,
+                    'default' => '',
+                ],
+                 'apel2'=>[
+                    'type' => 'varchar',
+                    'length' => 40,
+                    'not null' => TRUE,
+                ],
+                 'telefono'=>[
+                    'type' => 'varchar',
+                    'length' => 15,
+                    'not null' => TRUE,
+                    'default' => '',
+                ],
+                'email'=>[
+                    'type' => 'varchar',
+                    'length' => 40,
+                    'not null' => TRUE,
+                    'default' => '',
+                ],
+                'fecha_nacimiento' =>[
+                    'type' => 'varchar',
+                    'length' => 20,
+                ],
+                'sexo' =>[ 
+                    'type' => 'varchar',
+                    'length' => 40,
+                    'not null' => TRUE,
+                    'default' => '',
+                ],
+
+                'termino'=> [
+                    'type' => 'int',
+                   
+                ],
+            
+   ],
+            'primary key' => array('id'),
+   ];
+
+        return $schema;
+    }
+
+

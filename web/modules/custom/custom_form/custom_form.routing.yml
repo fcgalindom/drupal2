@@ -1,0 +1,7 @@
+example.form:
+  path: '/miformulario'
+  defaults:
+    _title: 'Example form'
+    _form: '\Drupal\custom_form\Form\CustomForm'
+  requirements:
+    _permission: 'access content'
